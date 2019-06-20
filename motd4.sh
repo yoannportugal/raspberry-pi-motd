@@ -10,6 +10,7 @@ UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
 MEM=`free -m | awk 'NR==2 { printf "Total: %sMB, Used: %sMB, Free: %sMB",$2,$3,$4; }'`
 DISK=`df -h ~ | awk 'NR==2 { printf "Total: %sB, Used: %sB, Free: %sB",$2,$3,$4; }'`
 TEMP=`/opt/vc/bin/vcgencmd measure_temp | cut -c "6-9"`
+VAR_IP_INTERN="$(hostname -I)"
 
 # get the load averages
 read one five fifteen rest < /proc/loadavg
@@ -31,6 +32,6 @@ echo "${GREEN}
 ( : '~'.~.'~' : ) ${DARKGREY}Disk usage.........: ${WHITE}${DISK}${RED}
  ~ .~ (   ) ~. ~  ${DARKGREY}Load Averages......: ${WHITE}${one}, ${five}, ${fifteen} (1, 5, 15 min)${RED}
   (  : '~' :  )   ${DARKGREY}Running Processes..: ${WHITE}`ps ax | wc -l | tr -d " "`${RED}
-   '~ .~~~. ~'    ${DARKGREY}IP Addresses.......: ${WHITE}`hostname -I`${RED}
+   '~ .~~~. ~'    ${DARKGREY}IP Addresses.......: ${WHITE}${VAR_IP_INTERN}${RED}
        '~'        ${DARKGREY}Temperature........: ${WHITE}${TEMP}ºC${RED}
 ${NC}"
