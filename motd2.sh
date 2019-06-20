@@ -60,6 +60,7 @@ function pie_ssh_welcome() {
     local bfgwht="${bld}$(tput setaf 7)"
 
     local logo=(
+        "${fggrn}                  "
         "${fggrn}   .~~.   .~~.    "
         "${fggrn}  '. \ ' ' / .'   "
         "${fgred}   .~ .~~~..~.    "
@@ -70,7 +71,6 @@ function pie_ssh_welcome() {
         "${fgred}  (  : '~' :  )   "
         "${fgred}   '~ .~~~. ~'    "
         "${fgred}       '~'        "
-        "${fgred}                  "
         "${fgred}                  "
         )
 
