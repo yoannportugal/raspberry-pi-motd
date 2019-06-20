@@ -7,7 +7,8 @@ let hours=$((${upSeconds}/3600%24))
 let days=$((${upSeconds}/86400))
 UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
 VAR_IP_INTERN="$(hostname -I)"
-VAR_IP_EXTERN="$(wget -q -O - http://icanhazip.com/ | tail)"
+VAR_IP_EXTERN4="$(wget -q -O - http://ipv4.icanhazip.com/ | tail)"
+VAR_IP_EXTERN6="$(wget -q -O - http://ipv6.icanhazip.com/ | tail)"
 MEM=`free -m | awk 'NR==2 { printf "Total: %sMB, Used: %sMB, Free: %sMB",$2,$3,$4; }'`
 DISK=`df -h ~ | awk 'NR==2 { printf "Total: %sB, Used: %sB, Free: %sB",$2,$3,$4; }'`
 TEMP=`/opt/vc/bin/vcgencmd measure_temp | cut -c "6-9"`
@@ -32,6 +33,6 @@ echo "${GREEN}
 ( : '~'.~.'~' : ) ${DARKGREY}Load Averages......: ${WHITE}${one}, ${five}, ${fifteen} (1, 5, 15 min)${RED}
  ~ .~ (   ) ~. ~  ${DARKGREY}Running Processes..: ${WHITE}`ps ax | wc -l | tr -d " "`${RED}
   (  : '~' :  )   ${DARKGREY}Local IP...........: ${WHITE}${VAR_IP_INTERN}${RED}
-   '~ .~~~. ~'    ${DARKGREY}External IP........: ${WHITE}${VAR_IP_EXTERN}${RED}
+   '~ .~~~. ~'    ${DARKGREY}External IP........: ${WHITE}${VAR_IP_EXTERN4} ${VAR_IP_EXTERN6}${RED}
        '~'        ${DARKGREY}Temperature........: ${WHITE}${TEMP}ºC${RED}
 ${NC}"
