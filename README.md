@@ -2,6 +2,8 @@
 
 ## Message of the Day for the Raspberry Pi ####
 
+All the work below is my customisation of motd from the forum thread on [raspberrypi.org](https://www.raspberrypi.org/forums/viewtopic.php?t=23440)
+
 
 ### motd1.sh:
 <p align="center">
