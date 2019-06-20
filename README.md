@@ -20,6 +20,11 @@ All the work below is my customisation of motd from the forum thread on [raspber
   <img src="https://github.com/yoannportugal/raspberry-pi-motd/blob/master/motd3.png"/>
 </p>
 
+### motd4.sh:
+<p align="center">
+  <img src="https://github.com/yoannportugal/raspberry-pi-motd/blob/master/motd4.png"/>
+</p> 
+
 Written in bash and tested with the Raspbian distribution.
 
 - Create file `motd.sh` in `/etc`
