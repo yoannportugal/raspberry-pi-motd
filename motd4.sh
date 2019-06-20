@@ -19,17 +19,18 @@ RED="$(tput sgr0 ; tput setaf 1)"
 GREEN="$(tput sgr0 ; tput setaf 2)"
 YELLOW="$(tput sgr0 ; tput setaf 3)"
 BLUE="$(tput sgr0 ; tput setaf 4)"
+WHITE="$(tput sgr0 ; tput setaf 7)"
 NC="$(tput sgr0)" # No Color
 
 echo "${GREEN}
    .~~.   .~~.    ${YELLOW}`hostname -f`${GREEN}
   '. \ ' ' / .'   ${YELLOW}`date +"%A, %e %B %Y, %r"`${RED}
    .~ .~~~..~.
-  : .~.'~'.~. :   ${DARKGREY}Uptime.............: ${BLUE}${UPTIME}${RED}
- ~ (   ) (   ) ~  ${DARKGREY}Memory.............: ${BLUE}${MEM}${RED}
-( : '~'.~.'~' : ) ${DARKGREY}Disk usage.........: ${BLUE}${DISK}${RED}
- ~ .~ (   ) ~. ~  ${DARKGREY}Load Averages......: ${BLUE}${one}, ${five}, ${fifteen} (1, 5, 15 min)${RED}
-  (  : '~' :  )   ${DARKGREY}Running Processes..: ${BLUE}`ps ax | wc -l | tr -d " "`${RED}
-   '~ .~~~. ~'    ${DARKGREY}IP Addresses.......: ${BLUE}`hostname -I`${RED}
-       '~'        ${DARKGREY}Temperature........: ${BLUE}${TEMP}ºC${RED}
+  : .~.'~'.~. :   ${DARKGREY}Uptime.............: ${WHITE}${UPTIME}${RED}
+ ~ (   ) (   ) ~  ${DARKGREY}Memory.............: ${WHITE}${MEM}${RED}
+( : '~'.~.'~' : ) ${DARKGREY}Disk usage.........: ${WHITE}${DISK}${RED}
+ ~ .~ (   ) ~. ~  ${DARKGREY}Load Averages......: ${WHITE}${one}, ${five}, ${fifteen} (1, 5, 15 min)${RED}
+  (  : '~' :  )   ${DARKGREY}Running Processes..: ${WHITE}`ps ax | wc -l | tr -d " "`${RED}
+   '~ .~~~. ~'    ${DARKGREY}IP Addresses.......: ${WHITE}`hostname -I`${RED}
+       '~'        ${DARKGREY}Temperature........: ${WHITE}${TEMP}ºC${RED}
 ${NC}"
