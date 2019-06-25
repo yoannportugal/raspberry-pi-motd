@@ -43,7 +43,7 @@ Use one of the 2 different motd layout to fill this file.
 - Change owner and make it executable: 
 
 ```bash
-$ sudo chown root:root /etc/motd.sh && sudo chmod +x /etc/motd.sh`
+$ sudo chown root:root /etc/motd.sh && sudo chmod +x /etc/motd.sh
 ```
 
 - Add `/etc/motd.sh` as the last line in your `~/.profile` to execute the script when the user logs in via a tty console or ssh.
@@ -52,7 +52,7 @@ $ sudo chown root:root /etc/motd.sh && sudo chmod +x /etc/motd.sh`
 - Remove the original motd file: 
 
 ```bash
-  $ sudo rm /etc/motd`
+  $ sudo rm /etc/motd
 ```
 
 
