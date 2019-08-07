@@ -80,7 +80,7 @@ function pie_ssh_welcome() {
         out+="  ${logo[$i]}  "
         case "$i" in
             0)
-                out+="${fgcyn}$(date +"%A, %e %B %Y, %r")"
+                out+="${fgcyn}$(date +"%A, %e %B %Y, %H:%M:%S")"
                 ;;
             1)
                 out+="${fgcyn}$(uname -srmo)"
