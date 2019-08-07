@@ -26,7 +26,7 @@ NC="$(tput sgr0)" # No Color
 
 echo "${GREEN}
    .~~.   .~~.    `hostname -f`
-  '. \ ' ' / .'   `date +"%A, %e %B %Y, %r"`${RED}
+  '. \ ' ' / .'   `date +"%A, %e %B %Y, %H:%M:%S"`${RED}
    .~ .~~~..~.
   : .~.'~'.~. :   ${DARKGREY}Uptime.............: ${BLUE}${UPTIME}${RED}
  ~ (   ) (   ) ~  ${DARKGREY}Memory.............: ${BLUE}${MEMFREE}kB (Free) / ${MEMTOTAL}kB (Total)${RED}
