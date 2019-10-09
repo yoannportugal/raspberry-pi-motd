@@ -37,14 +37,14 @@ Written in bash and tested with the Raspbian distribution.
 - Create file `motd.sh` in `/etc`
 
 ```bash
-$sudo nano /etc/motd.sh
+sudo nano /etc/motd.sh
 ```
 Use one of the 2 different motd layout to fill this file.
 
 - Change owner and make it executable: 
 
 ```bash
-$ sudo chown root:root /etc/motd.sh && sudo chmod +x /etc/motd.sh
+sudo chown root:root /etc/motd.sh && sudo chmod +x /etc/motd.sh
 ```
 
 - Add `/etc/motd.sh` as the last line in your `~/.profile` to execute the script when the user logs in via a tty console or ssh.
@@ -53,14 +53,14 @@ $ sudo chown root:root /etc/motd.sh && sudo chmod +x /etc/motd.sh
 - Remove the original motd file: 
 
 ```bash
-  $ sudo rm /etc/motd
+  sudo rm /etc/motd
 ```
 
 
 You can remove the "last login" information. However it is considered a security risk. If you wish to do so, you should disable the `PrintLastLog` option from the `sshd` service. Edit the `/etc/ssh/sshd_config` file and uncomment the line `#PrintLastLog yes`:
   
   ```bash
-  $ sudo nano /etc/ssh/sshd_config
+  sudo nano /etc/ssh/sshd_config
   ```
   
   Before:
@@ -78,7 +78,7 @@ You can remove the "last login" information. However it is considered a security
   Restart the `sshd` service:
   
   ```bash
-  $ sudo /etc/init.d ssh restart
+  sudo /etc/init.d ssh restart
   ```
 Now simply SSH into the Pi and enjoy the new motd.
 
