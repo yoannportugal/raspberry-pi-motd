@@ -90,3 +90,12 @@ Note: If you don't see the degree Celsius character correctly (`º`) make sure y
 The ASCII logo came from a forum thread on [raspberrypi.org](https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=5494#p78678)
 
 
+Auto installation:
+```
+git clone https://github.com/yoannportugal/raspberry-pi-motd
+sudo chown root:root /raspberry-pi-motd/install-motd && sudo chmod +x /raspberry-pi-motd/install-motd
+sudo sh /raspberry-pi-motd/install-motd
+rm -R /raspberry-pi-motd
+```
+
+
