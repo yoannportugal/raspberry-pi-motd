@@ -93,9 +93,9 @@ The ASCII logo came from a forum thread on [raspberrypi.org](https://www.raspber
 Auto installation:
 ```
 git clone https://github.com/yoannportugal/raspberry-pi-motd
-sudo chown root:root /raspberry-pi-motd/install-motd && sudo chmod +x /raspberry-pi-motd/install-motd
-sudo sh /raspberry-pi-motd/install-motd
-rm -R /raspberry-pi-motd
+sudo chown root:root /home/pi/raspberry-pi-motd/install-motd/install-motd && sudo chmod +x /home/pi/raspberry-pi-motd/install-motd/install-motd
+sudo sh /home/pi/raspberry-pi-motd/install-motd/install-motd
+rm -R /home/pi/raspberry-pi-motd
 ```
 
 
