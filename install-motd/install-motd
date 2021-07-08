@@ -4,7 +4,7 @@ cp ./motd.sh /etc
 
 sudo chown root:root /etc/motd.sh && sudo chmod +x /etc/motd.sh
 
-sed -i '1i/etc/motd.sh' ~./profile
+sed -i '1i/etc/motd.sh' ~/.profile
 
 sudo rm /etc/motd
 
