@@ -95,6 +95,9 @@ Auto installation:
 git clone https://github.com/yoannportugal/raspberry-pi-motd
 sudo chown root:root /home/pi/raspberry-pi-motd/install-motd/install-motd && sudo chmod +x /home/pi/raspberry-pi-motd/install-motd/install-motd
 sudo sh /home/pi/raspberry-pi-motd/install-motd/install-motd
+cd /raspberry-pi-motd/install-motd
+sudo sh install-motd
+sudo echo "/etc/motd.sh" >> ~/.profile
 rm -R /home/pi/raspberry-pi-motd
 ```
 
