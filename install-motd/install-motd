@@ -1,7 +1,7 @@
 #!/bin/bash
 # Install motd
 
-cat > /etc,/motd.sh << EOF
+cat > /etc/motd.sh << EOF
 #!/bin/bash
 
 let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
